@@ -7,6 +7,7 @@ end
 -- get lualine theme
 --local lualine_nightfly = require("lualine.themes.nightfly")
 local lualine_catppuccin = require("lualine.themes.catppuccin")
+lualine_catppuccin.normal.c.bg = 'None'
 
 -- configure lualine with modified theme
 lualine.setup({

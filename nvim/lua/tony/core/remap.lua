@@ -38,6 +38,7 @@ remap.set("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
 remap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- toggle split window maximization
 
 -- toggle nvim-tree
-remap.set("n", "<leader>cd", ":NvimTreeToggle<CR>") 
-
+-- remap.set("n", "<leader>cd", ":NvimTreeToggle<CR>") 
+-- need this bind if nvim-tree is disbaled
+remap.set("n", "<leader>cd", vim.cmd.Ex) 
 
