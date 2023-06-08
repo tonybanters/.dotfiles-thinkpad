@@ -32,7 +32,8 @@ return packer.startup(function(use)
 
     -- Color theme: Comment out what won't be used?
     -- use("bluz71/vim-moonfly-colors")
-    use("catppuccin/nvim")
+    -- use("catppuccin/nvim")
+    use({'Mofiqul/vscode.nvim', as = 'vscode'})
 
     -- tmux & split window navigation
     use("christoomey/vim-tmux-navigator")
@@ -52,6 +53,9 @@ return packer.startup(function(use)
 
     -- vs-code like icons
     use("nvim-tree/nvim-web-devicons")
+
+    -- transparency
+    use("xiyaowong/transparent.nvim")
 
     -- statusline
     use("nvim-lualine/lualine.nvim")
