@@ -4,17 +4,29 @@ if not status then
   return
 end
 
+-- Custom Colors:
+local colors = {
+    darkgray = "#16161d",
+    gray = "#727169",
+    innerbg = nil,
+    outerbg = "#16161D",
+    normal = "#7e9cd8",
+    insert = "#98bb6c",
+    visual = "#ffa066",
+    replace = "#e46876",
+    command = "#e6c384",
+}
+
+
 -- get lualine theme
---local lualine_nightfly = require("lualine.themes.nightfly")
---local lualine_catppuccin = require("lualine.themes.catppuccin")
-local lualine_vscode = require("lualine.themes.vscode")
--- lualine_catppuccin.normal.c.bg = 'None'
-lualine_vscode.normal.c.bg = 'None'
+-- local lualine_custom = require("lualine.themes.nightfly")
+--local lualine_custom = require("lualine.themes.catppuccin")
+local lualine_custom = require("lualine.themes.codedark")
+lualine_custom.normal.c.bg = 'None'
 
 -- configure lualine with modified theme
 lualine.setup({
   options = {
---    theme = lualine_catppuccin,
-    theme = lualine_vscode,
+    theme = lualine_custom,
   },
 })
