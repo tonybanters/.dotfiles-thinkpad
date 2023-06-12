@@ -60,9 +60,29 @@ return packer.startup(function(use)
     -- statusline
     use("nvim-lualine/lualine.nvim")
 
+    -- harpoon
+    use("theprimeagen/harpoon")
+
+    -- Undotree
+    use("mbbill/undotree")
+
     -- telescope
     use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
     use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" })
+
+    -- treesitter configuration
+    use({
+        "nvim-treesitter/nvim-treesitter",
+        run = function()
+            local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
+            ts_update()
+        end,
+    })
+
+    
+    -- auto closing
+    use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
+    use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags
 
     if packer_bootstrap then
         require("packer").sync()
