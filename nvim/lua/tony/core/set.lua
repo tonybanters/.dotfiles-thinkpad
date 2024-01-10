@@ -5,8 +5,8 @@ set.relativenumber = true
 set.number = true
 
 -- indentation and tabs
-set.tabstop = 4
-set.shiftwidth = 4
+set.tabstop = 2
+set.shiftwidth = 2
 set.autoindent = true
 set.expandtab = true
 
@@ -22,6 +22,9 @@ set.signcolumn = "yes"
 -- cursor line
 set.cursorline = true
 
+-- 80th column
+set.colorcolumn = "80"
+
 -- clipboard
 set.clipboard:append("unnamedplus")
 
@@ -33,3 +36,19 @@ set.splitbelow = true
 set.splitright = true
 
 set.iskeyword:append("-")
+
+-- keep cursor at least 8 rows from top/bot
+set.scrolloff = 8
+
+-- undo dir settings
+set.swapfile = false
+set.backup = false
+set.undodir = os.getenv("HOME") .. "/.vim/undodir"
+set.undofile = true
+
+-- incremental search
+set.incsearch = true
+
+-- faster cursor hold
+set.updatetime = 50
+

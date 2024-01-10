@@ -3,7 +3,6 @@ local ui = require("harpoon.ui")
 
 vim.keymap.set("n", "<leader>a", mark.add_file)
 vim.keymap.set("n", "<C-e>", ui.toggle_quick_menu)
--- vim.keymap.set("n", "<C-n>", ui.nav_next())
 
 -- Go to next file
 vim.keymap.set('n', '<C-n>', function()
@@ -12,7 +11,7 @@ end)
 
 -- Go to previous file
 vim.keymap.set('n', '<C-p>', function()
-	ui.nav_next();
+	ui.nav_prev();
 end)
 
 

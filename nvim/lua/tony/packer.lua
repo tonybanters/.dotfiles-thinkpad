@@ -54,8 +54,8 @@ return packer.startup(function(use)
     -- vs-code like icons
     use("nvim-tree/nvim-web-devicons")
 
-    -- transparency
-    use("xiyaowong/transparent.nvim")
+    -- -- transparency
+    -- use("xiyaowong/transparent.nvim")
 
     -- statusline
     use("nvim-lualine/lualine.nvim")
@@ -78,11 +78,38 @@ return packer.startup(function(use)
             ts_update()
         end,
     })
+    
+    use('nvim-treesitter/nvim-treesitter-context')
 
     
     -- auto closing
     use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
     use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags
+
+    
+    -- LSP
+    use {
+        'VonHeikemen/lsp-zero.nvim',
+        branch = 'v1.x',
+        requires = {
+            -- LSP Support
+            {'neovim/nvim-lspconfig'},
+            {'williamboman/mason.nvim'},
+            {'williamboman/mason-lspconfig.nvim'},
+
+            -- Autocompletion
+            {'hrsh7th/nvim-cmp'},
+            {'hrsh7th/cmp-buffer'},
+            {'hrsh7th/cmp-path'},
+            {'saadparwaiz1/cmp_luasnip'},
+            {'hrsh7th/cmp-nvim-lsp'},
+            {'hrsh7th/cmp-nvim-lua'},
+
+            -- Snippets
+            {'L3MON4D3/LuaSnip'},
+            {'rafamadriz/friendly-snippets'},
+        }
+    }
 
     if packer_bootstrap then
         require("packer").sync()
