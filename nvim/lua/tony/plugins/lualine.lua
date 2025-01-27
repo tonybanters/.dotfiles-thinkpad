@@ -20,8 +20,8 @@ local colors = {
 
 -- get lualine theme
 -- local lualine_custom = require("lualine.themes.nightfly")
---local lualine_custom = require("lualine.themes.catppuccin")
-local lualine_custom = require("lualine.themes.codedark")
+-- local lualine_custom = require("lualine.themes.catppuccin")
+local lualine_custom = require("lualine.themes.vscode")
 lualine_custom.normal.c.bg = 'None'
 
 -- configure lualine with modified theme

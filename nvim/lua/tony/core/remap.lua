@@ -13,6 +13,7 @@ remap.set("n", "<leader>nh", ":nohl<CR>")
 remap.set({"n", "v"}, "dd", '"_dd')
 remap.set({"n", "v"}, "diw", '"_dw')
 remap.set({"n", "v"}, "dw", '"_dw')
+remap.set({"n", "v"}, "<leader>y", [["+y]]) -- system clipboard
 
 -- Source Files:
 remap.set("n", "<leader><leader>", ":so<CR>")
@@ -26,6 +27,9 @@ remap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
 remap.set("n", "<leader>sh", "<C-w>s") -- split window horizontally
 remap.set("n", "<leader>se", "<C-w>=") -- make split windows equal width & height
 remap.set("n", "<leader>sk", ":close<CR>") -- close current split window
+
+remap.set('n', '<leader>y', '<Plug>OSCYankOperator')
+remap.set('v', '<leader>y', '<Plug>OSCYankVisual')
 
 remap.set("n", "<leader>to", ":tabnew<CR>") -- open new tab
 remap.set("n", "<leader>tx", ":tabclose<CR>") -- close current tab

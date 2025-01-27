@@ -86,7 +86,16 @@ return packer.startup(function(use)
     use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
     use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags
 
+    use('ojroques/vim-oscyank')
     
+    use({
+      "nvimtools/none-ls.nvim",
+      config = function()
+          require("null-ls").setup()
+      end,
+      requires = { "nvim-lua/plenary.nvim" },
+    })
+
     -- LSP
     use {
         'VonHeikemen/lsp-zero.nvim',
